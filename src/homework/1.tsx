@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useRef } from 'react';
-import { Options, Props, Ref } from './type';
+import { Props, Ref } from './type';
 
 // Опишіть Props
 export function Observer({ children, onContentEndVisible }: Props) {
@@ -10,7 +10,7 @@ export function Observer({ children, onContentEndVisible }: Props) {
 
 	useEffect(() => {
 		// Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-		const options: Options = {
+		const options: IntersectionObserverInit = {
 			rootMargin: '0px',
 			threshold: 1.0,
 			root: null,
